@@ -1,0 +1,9 @@
+udemy --> Cursos de python: https://www.udemy.com/courses/search/?q=python
+	  Cursos de R: https://www.udemy.com/courses/search/?src=ukw&q=R
+
+codecademy --> Cursos de paython: https://www.codecademy.com/catalog/language/python
+	       Cursos de R: https://www.codecademy.com/catalog/language/r
+
+Rpubs --> Ejemplos de código en R: https://rpubs.com/
+
+stackoverflow --> Para resolver dudas sobre python o R: https://es.stackoverflow.com/
