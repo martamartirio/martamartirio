@@ -1,5 +1,5 @@
 # Técnicas de Web scraping
-## José Manuel García rodes
+## José Manuel García Rodes
 ### jmg.rodes@gmail.com
 
 En este repositorio se encuentra el contenido de la ponencia realizada el 25 de noviembre de 2021
