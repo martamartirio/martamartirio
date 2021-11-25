@@ -1,5 +1,6 @@
-# web-scraping
-Web scraping de diarios, boletines oficiales y Twitter.
+# Técnicas de Web scraping
+## José Manuel García rodes
+### jmg.rodes@gmail.com
 
-Este repositorio se encuentra el contenido de la ponencia realizada el 25 de noviembre de 2021
-y los enlaces y scripts utilizados en la presentación.
+En este repositorio se encuentra el contenido de la ponencia realizada el 25 de noviembre de 2021
+junto con los enlaces y scripts utilizados en la presentación.
