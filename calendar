@@ -1,0 +1,48 @@
+from datetime import datetime
+from icalendar import Calendar, Event
+
+# Function to add events to the calendar
+def add_event(cal, name, date, start_time, end_time):
+    event = Event()
+    event.add('summary', name)
+    event.add('dtstart', datetime.strptime(f"{date} {start_time}", "%Y-%m-%d %H:%M"))
+    event.add('dtend', datetime.strptime(f"{date} {end_time}", "%Y-%m-%d %H:%M"))
+    cal.add_component(event)
+
+# Create a new calendar
+cal = Calendar()
+
+# Events for February to April
+feb_apr_events = [
+    {"date": "2024-02-24", "times": [("12:00", "14:00"), ("15:00", "19:00")]},
+    {"date": "2024-02-26", "times": [("09:00", "13:00"), ("14:00", "18:00")]},
+    {"date": "2024-03-24", "times": [("12:00", "14:00"), ("15:00", "19:00")]},
+    {"date": "2024-03-26", "times": [("09:00", "13:00"), ("14:00", "18:00")]},
+    {"date": "2024-04-28", "times": [("12:00", "14:00"), ("15:00", "19:00")]},
+    {"date": "2024-04-30", "times": [("09:00", "13:00"), ("14:00", "18:00")]}
+]
+
+# Events for May to July
+may_jul_events = [
+    {"date": "2024-05-29", "times": [("09:00", "18:00")]},
+    {"date": "2024-05-30", "times": [("09:00", "13:00")]},
+    {"date": "2024-06-19", "times": [("09:00", "18:00")]},
+    {"date": "2024-06-20", "times": [("09:00", "13:00")]},
+    {"date": "2024-07-17", "times": [("09:00", "18:00")]},
+    {"date": "2024-07-18", "times": [("09:00", "13:00")]}
+]
+
+# Add events to the calendar
+for event in feb_apr_events:
+    for start, end in event["times"]:
+        add_event(cal, "Comisión ANECA", event["date"], start, end)
+
+for event in may_jul_events:
+    for start, end in event["times"]:
+        add_event(cal, "Comisión ANECA", event["date"], start, end)
+
+# Save the calendar to a file
+with open("Comision_ANECA.ics", "wb") as f:
+    f.write(cal.to_ical())
+
+print("Archivo de calendario creado: Comision_ANECA.ics")
